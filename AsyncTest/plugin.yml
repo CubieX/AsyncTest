@@ -1,0 +1,21 @@
+name: AsyncTest
+main: com.github.CubieX.Plugin.AsyncTest
+author: CubieX
+softdepend: [PermissionsEx, zPermissions, bPermissions, PermissionsBukkit]
+version: 0.0.1
+description: Test of async methods
+
+commands:
+    at:
+      description: Using AsyncTest
+      usage: /at version | reload | query
+
+permissions:
+    asynctest.use:
+        description: Use normal commands
+        default: op
+    asynctest.admin:
+        description: Allows use of all commands and effects
+        default: op
+        children:
+          asynctest.use: true
